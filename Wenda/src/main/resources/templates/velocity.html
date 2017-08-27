@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+##注释
+#*
+    块注释
+*#
+request time: $!{time} <br>
+
+shape: $!{Shapes} <br>
+<br>
+#foreach($shape in $Shapes)
+    shape $!{foreach.count} : $shape <br>
+    #render_shape($foreach.count,$shape)<br>
+#end
+
+#macro (render_shape, $index, $shape)
+    Macro shape $index , $shape <br>
+#end
+</body>
+</html>
